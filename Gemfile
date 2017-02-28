@@ -25,7 +25,7 @@ group :development, :test do
   # gem 'bundler-audit', '>= 0.5.0', require: false
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
-  # gem 'factory_girl_rails'
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
 end
 
@@ -34,7 +34,6 @@ group :test do
   # gem 'database_cleaner'
   # gem 'formulaic'
   # gem 'launchy'
-  # gem 'shoulda-matchers'
   # gem 'simplecov', require: false
   # gem 'timecop'
   # gem 'webmock'
