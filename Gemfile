@@ -31,7 +31,7 @@ end
 
 group :test do
   # gem 'capybara-webkit'
-  # gem 'database_cleaner'
+  gem 'database_cleaner'
   # gem 'formulaic'
   # gem 'launchy'
   # gem 'simplecov', require: false
