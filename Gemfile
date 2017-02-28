@@ -11,6 +11,7 @@ gem 'rails', '~> 5.0.1'
 # gem 'redis', '~> 3.0'
 
 group :development do
+  gem 'annotate'
   # gem 'capistrano-rails'
   gem 'listen', '~> 3.0.5'
   # gem 'reek', require: false
@@ -26,6 +27,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'ffaker'
   gem 'rspec-rails', '~> 3.5'
 end
 
