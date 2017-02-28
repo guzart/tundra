@@ -21,8 +21,8 @@ end
 
 group :development, :test do
   gem 'awesome_print'
-  # gem 'bullet'
-  # gem 'bundler-audit', '>= 0.5.0', require: false
+  gem 'bullet'
+  gem 'bundler-audit', '>= 0.5.0', require: false
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
