@@ -14,5 +14,11 @@ Bundler.require(*Rails.groups)
 module Tundra
   class Application < Rails::Application
     config.api_only = true
+
+    config.generators do |g|
+      g.request_specs false
+      g.routing_specs false
+      g.test_framework :rspec
+    end
   end
 end
