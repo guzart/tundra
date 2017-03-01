@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 ruby '2.3.3'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'dry-struct'
+gem 'dry-types'
 # gem 'jbuilder', '~> 2.5'
 gem 'knock'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
@@ -10,12 +12,13 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 gem 'rails', '~> 5.0.1'
 # gem 'redis', '~> 3.0'
+gem 'trailblazer-operation'
 
 group :development do
   gem 'annotate'
   # gem 'capistrano-rails'
   gem 'listen', '~> 3.0.5'
-  # gem 'reek', require: false
+  gem 'reek', require: false
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
