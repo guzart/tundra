@@ -1,0 +1,39 @@
+{
+  "name": "tundra",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "config": {
+    "presets": [
+      "neutrino-preset-airbnb-base",
+      "neutrino-preset-react"
+    ],
+    "html": {
+      "links": [
+        {
+          "href": "/favicon.png",
+          "rel": "icon",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-plugin-import": "^2.2.0",
+    "neutrino": "^4.2.1",
+    "neutrino-preset-airbnb-base": "^4.3.1",
+    "neutrino-preset-react": "^4.2.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "styled-components": "^1.4.3"
+  }
+}
