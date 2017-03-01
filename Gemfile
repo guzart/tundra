@@ -17,13 +17,17 @@ gem 'trailblazer-operation'
 
 group :development do
   gem 'annotate'
+  # gem 'brakeman'
   # gem 'capistrano-rails'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'listen', '~> 3.0.5'
   gem 'reek', require: false
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'terminal-notifier-guard'
 end
 
 group :development, :test do
