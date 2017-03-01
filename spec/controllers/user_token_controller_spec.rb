@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UserTokenController, type: :controller do
+describe UserTokenController, type: :controller do
   describe 'POST index' do
     let(:user) { FactoryGirl.create(:user, email: 'john@example.com', password: 'helloworld') }
 

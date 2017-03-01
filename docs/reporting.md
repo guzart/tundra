@@ -1,5 +1,11 @@
 # Domain
 
+* `Reporting::Building`
+* `Reporting::Inspector`
+* `Reporting::Inspector::CreatesReportOperation`
+* `Reporting::Report::CreatedEvent`
+* `Reporting::InspectorRepository`
+
 Entities:
 
 * `Reporting::Entities::Building`
@@ -28,18 +34,18 @@ Events:
 
 Operations:
 
-* `Reporting::Contacts::RateReport`
-* `Reporting::Inspectors::CreateReport`
-* `Reporting::Inspectors::DiscardReport`
-* `Reporting::Inspectors::SubmitReport`
-* `Reporting::Inspectors::UpdateReport`
-* `Reporting::Reports::SendApprovalNotifications`
-* `Reporting::Reports::SendAutoApprovedNotifications`
-* `Reporting::Reports::SendContactsNotifications`
-* `Reporting::Reports::SendRejectionNotifications`
-* `Reporting::Reports::SendReportRatingNotifications`
-* `Reporting::Supervisors::ApproveReport`
-* `Reporting::Supervisors::RejectReport`
+* `Reporting::Operations::Contact::RatesReport`
+* `Reporting::Operations::Inspector::CreatesReport`
+* `Reporting::Operations::Inspector::DiscardsReport`
+* `Reporting::Operations::Inspector::SubmitsReport`
+* `Reporting::Operations::Inspector::UpdatesReport`
+* `Reporting::Operations::Report::SendsApprovalNotifications`
+* `Reporting::Operations::Report::SendsAutoApprovedNotifications`
+* `Reporting::Operations::Report::SendsContactsNotifications`
+* `Reporting::Operations::Report::SendsRejectionNotifications`
+* `Reporting::Operations::Report::SendsReportRatingNotifications`
+* `Reporting::Operations::Supervisor::ApprovesReport`
+* `Reporting::Operations::Supervisor::RejectsReport`
 
 Services:
 
