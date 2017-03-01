@@ -12,6 +12,7 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 gem 'rails', '~> 5.0.1'
 # gem 'redis', '~> 3.0'
+gem 'trailblazer'
 gem 'trailblazer-operation'
 
 group :development do
