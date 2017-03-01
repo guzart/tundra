@@ -12,6 +12,8 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
+notification :terminal_notifier if `uname` =~ /Darwin/
+
 guard :rspec, cmd: 'bin/rspec' do
   require 'guard/rspec/dsl'
   dsl = Guard::RSpec::Dsl.new(self)
