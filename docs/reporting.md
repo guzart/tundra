@@ -15,10 +15,11 @@ Entities:
 
 Events:
 
+* `Reporting::Events::CommentPosted`
+* `Reporting::Events::ConversationCreated`
+* `Reporting::Events::MessageSent`
 * `Reporting::Events::ReportApproved`
 * `Reporting::Events::ReportAutoApproved`
-* `Reporting::Events::ReportCommentPosted`
-* `Reporting::Events::ReportMessageSent`
 * `Reporting::Events::ReportRated`
 * `Reporting::Events::ReportRejected`
 * `Reporting::Events::ReportSubmitted`
@@ -42,7 +43,7 @@ Operations:
 
 Services:
 
-* `Reporting::Reports::DeliveryServices`
+* `Reporting::Reports::SubmitService`
 
 Repositories:
 
@@ -51,22 +52,6 @@ Repositories:
 * `Reporting::Repositories::InspectorsRepository`
 * `Reporting::Repositories::ReportsRepository`
 * `Reporting::Repositories::SupervisorsRepository`
-
-## Infrastructure
-
-GraphQL:
-
-* `Reporting::GraphQL::Mutations::InspectorCreatesReport`
-* `Reporting::GraphQL::Mutations::InspectorDiscardsReport`
-* `Reporting::GraphQL::Mutations::InspectorSubmitsReport`
-* `Reporting::GraphQL::Mutations::InspectorUpdatesReport`
-* `Reporting::GraphQL::Mutations::SupervisorRejectsReport`
-* `Reporting::GraphQL::Resolvers::Inspector`
-* `Reporting::GraphQL::Schema`
-* `Reporting::GraphQL::Types::Building`
-* `Reporting::GraphQL::Types::Inspector`
-* `Reporting::GraphQL::Types::Query`
-* `Reporting::GraphQL::Types::Viewer`
 
 Rails:
 
@@ -119,8 +104,24 @@ Rails:
 
 ```ruby
 inspector.submit_report(report)
-ReportDeliveryService.new(inspector).submit_report(report)
-ReportDeliveryService.inspector_submits_report(inspector, report)
+Reports::SubmitService.submit_by_inspector(self, report)
 # or
 supervisor.submit_report(report)
+Reports::SubmitService.submit_by_supervisor(self, report)
 ```
+
+## Infrastructure
+
+GraphQL:
+
+* `GraphQL::Reporting::Mutations::InspectorCreatesReport`
+* `GraphQL::Reporting::Mutations::InspectorDiscardsReport`
+* `GraphQL::Reporting::Mutations::InspectorSubmitsReport`
+* `GraphQL::Reporting::Mutations::InspectorUpdatesReport`
+* `GraphQL::Reporting::Mutations::SupervisorRejectsReport`
+* `GraphQL::Reporting::Resolvers::Inspector`
+* `GraphQL::Reporting::Types::Building`
+* `GraphQL::Reporting::Types::Inspector`
+* `GraphQL::Reporting::Types::Query`
+* `GraphQL::Reporting::Types::Viewer`
+* `GraphQL::Schema`
