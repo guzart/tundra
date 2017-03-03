@@ -2,12 +2,12 @@ module Reporting
   class InspectorCreatesReportOperation < BaseOperation
     # validate input
     step :find_inspector
-    step :authorize
-    step Model(Report, :new)
-    step :assign_inspector
+    # step :authorize
+    # step Model(Report, :new)
+    # step :assign_inspector
 
     def find_inspector(options, params:, **)
-      options['inspector'] = InspectorRepository.find(params[:inspector_id])
+      options['inspector'] = options['persistence.repositories.inspector'].find(params[:inspector_id])
     end
 
     def authorize(options, **)

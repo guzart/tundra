@@ -46,6 +46,8 @@ guard :rspec, cmd: 'bin/rspec' do
   watch(rails.routes)          { "#{rspec.spec_dir}/routing" }
   watch(rails.app_controller)  { "#{rspec.spec_dir}/controllers" }
 
+  watch(%r{^app/operations/(.+)_operation\.rb$}) { "#{rspec.spec_dir}/operations" }
+
   # Capybara features specs
   watch(rails.view_dirs)     { |m| rspec.spec.call("features/#{m[1]}") }
   watch(rails.layouts)       { |m| rspec.spec.call("features/#{m[1]}") }
